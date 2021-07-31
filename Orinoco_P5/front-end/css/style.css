@@ -8,3 +8,16 @@
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+img {
+    object-fit: cover;
+}
+.row {
+    margin-top: 1rem;
+}
+.card {
+    border: 5px solid white;
+}
+.figure-img {
+    padding-top: 1rem;
+    padding-left: 0.5rem;
+}
