@@ -86,27 +86,17 @@
               <input type="tel" class="form-control" id="inputTel4">
             </div>
             <div class="col-12">
-              <label for="inputAddress" class="form-label">Addresse de livraison</label>
+              <label for="inputAddress" class="form-label">Adresse de livraison</label>
               <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-            </div>
-            <div class="col-12">
-              <label for="inputAddress2" class="form-label">Address de facturation</label>
-              <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
             </div>
             <div class="col-md-6">
               <label for="inputCity" class="form-label">Ville</label>
               <input type="text" class="form-control" id="inputCity"placeholder="Marseille" >
             </div>
-            <div class="col-md-4">
-              <label for="inputState" class="form-label">Code postal</label>
-              <select id="inputState" class="form-select">
-                <option selected>Choose...</option>
-                <option>...</option>
-              </select>
-            </div>
-            <div class="col-md-2">
-              <label for="inputZip" class="form-label">Zip</label>
-              <input type="text" class="form-control" id="inputZip">
+            <div class="col-md-6">
+              <label for="inputCodePostal" class="form-label">Code postal</label>
+              <input type="number" id="inputCodePostal" class="form-control">
+            </input>
             </div>
             <div class="col-12">
                 <div class="form-check">
@@ -118,7 +108,8 @@
                     Vous devez accepter les termes et conditions.
                   </div>
                 </div>
-              </div>            <div class="col-12">
+              </div>            
+            <div class="col-12">
               <button type="submit" class="btn btn-primary">Commandez</button>
             </div>
           </form>
@@ -153,5 +144,7 @@
             </div>
         </footer>
     </div>
+<!--Script-->
+<script src="./js/panier.js"></script>
 </body>
 </html>
