@@ -24,6 +24,7 @@ return fetch("http://localhost:3000/api/teddies")
 function displayArticles(article) {
 document.getElementById("main").innerHTML += `   
 <div class="col">
+<a href="produit.html?id=${article._id}">
   <div class="card">
     <img src="${article.imageUrl}" class="card-img-top" id="imageUrl" width="400" height="300" alt="...">
     <div class="card-body" >
@@ -31,10 +32,8 @@ document.getElementById("main").innerHTML += `
     <h5 class="produitPrix" id="price">${article.price}€</h5>
   </div>
   <p id="description">${article.description}</p>
+  </a>
 </div>`
 
-document.getElementById("produitLink").href += `?id=${article.id}`
-
 }
-
 
