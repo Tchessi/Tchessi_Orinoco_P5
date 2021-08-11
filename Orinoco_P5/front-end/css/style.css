@@ -37,6 +37,13 @@ img {
 .h4, h4 {
   padding-left: 3rem;
 }
+a {
+  color: #000000;
+  text-decoration: none;
+}
+p#description {
+  padding-left: 10px;
+}
 h5.produitPrix {
   background-color: lightpink;
   border-radius: 5px;
