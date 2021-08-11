@@ -35,7 +35,6 @@ document.getElementById("main").innerHTML += `
 
 document.getElementById("produitLink").href += `?id=${article.id}`
 
-
 }
 
 
