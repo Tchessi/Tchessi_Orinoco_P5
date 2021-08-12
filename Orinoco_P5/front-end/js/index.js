@@ -29,7 +29,7 @@ document.getElementById("main").innerHTML += `
     <img src="${article.imageUrl}" class="card-img-top" id="imageUrl" width="400" height="300" alt="...">
     <div class="card-body" >
     <h5 class="produitName" id="name">${article.name}</h5>
-    <h5 class="produitPrix" id="price">${article.price}€</h5>
+    <h5 class="produitPrix" id="price">${article.price/100}€</h5>
   </div>
   <p id="description">${article.description}</p>
   </a>
