@@ -25,6 +25,8 @@ async function main() {
     console.log(article)
 
     document.getElementById("product-image").src = article.imageUrl;
+    document.getElementById("produit-name").textContent = article.name;
+
 
 }
 
