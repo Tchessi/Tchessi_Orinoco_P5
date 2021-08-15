@@ -2,12 +2,10 @@ const urlParams = new URLSearchParams(location.search);
 
 var id = urlParams.get('id')
 
+main()
 
 
-// http://localhost:3000/api/teddies/5be9c8541c9d440000665243
-//imageSrc = 
-
-// Appel API
+// Appel à  API
 function getArticle() {
     return fetch("http://localhost:3000/api/teddies/" + id)
         .then(function (httpBobyResponse) {
@@ -40,7 +38,16 @@ async function main() {
         <button type="button" class="btn btn-primary">Ajouter au panier</button>
         </div>
         </div>`
-
+// Selection de couleur pour la personnalisation des peluches
+        let colorSelect = document.getElementById("color-select");
+        for (let i = 0; i < article.colors.length; i++) {
+        let option = document.createElement("option");
+        option.innerText = article.colors[i];
+        colorSelect.appendChild(option);
+      }
 }
 
-main()
+
+
+
+
