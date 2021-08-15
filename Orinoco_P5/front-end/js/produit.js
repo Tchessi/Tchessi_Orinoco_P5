@@ -3,7 +3,11 @@ const urlParams = new URLSearchParams(location.search);
 var id = urlParams.get('id')
 
 main()
-
+function main() {
+    checkIf404();
+    getArticles();
+    addToCart();
+  }
 
 // Appel à  API
 function getArticle() {
@@ -35,7 +39,8 @@ async function main() {
         <div class="col-6">
         <p id="description">${article.description}</p>
         <div class="col align-self-end">
-        <button type="button" class="btn btn-primary">Ajouter au panier</button>
+        <button type="button" class="btn btn-primary " id="myBtn">Ajouter au panier</button>
+        <p id="succes">
         </div>
         </div>`
 // Selection de couleur pour la personnalisation des peluches
@@ -45,9 +50,13 @@ async function main() {
         option.innerText = article.colors[i];
         colorSelect.appendChild(option);
       }
+      document.getElementById("myBtn").addEventListener("click", addToCart);
+// Confirmation du boton -- ajoutez à mon panier --
+function addToCart() {
+  document.getElementById("succes").innerHTML = "Votre a bien été ajouté";
+  
 }
 
-
-
+}
 
 
