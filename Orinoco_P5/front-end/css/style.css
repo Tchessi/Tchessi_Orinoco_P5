@@ -52,9 +52,10 @@ h5.produitPrix {
 button.btn.btn-primary {
   margin-bottom: 25px;
 }
+
 /* Option couleur */
 body {
-  background: linear-gradient(35deg, red, purple);
+  background: linear-gradient(35deg, rgb(223, 159, 159), purple);
 }
 /* <select> styles */
 select {
@@ -64,11 +65,10 @@ select {
   outline: 0;
   font: inherit;
   /* Personalise */
-  width: 20em;
+  width: 10em;
   height: 3em;
   padding: 0 4em 0 1em;
-  background: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg) no-repeat right 0.8em center / 1.4em, linear-gradient(to left, rgba(255, 255, 255, 0.3) 3em, rgba(255, 255, 255, 0.2) 3em);
-  color: white;
+  color: brown;
   border-radius: 0.25em;
   box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
@@ -76,7 +76,7 @@ select {
 }
 select option {
   color: inherit;
-  background-color: #320a28;
+  background-color: white;
   /* Remove focus outline */
 }
 select:focus {
@@ -86,8 +86,18 @@ select:focus {
 select::-ms-expand {
   display: none;
 }
+#succes {
+  color: #013e3e;
+  font-size: larger;
+  font-weight: 700;
+  padding: 0.5rem;
+  border-radius: 5px;
+  text-align: center;
+}
 
 /* Fin d'option couleur */
+
+
 /* PANIER */
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
