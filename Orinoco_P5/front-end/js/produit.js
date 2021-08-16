@@ -7,7 +7,7 @@ function main() {
     checkIf404();
     getArticles();
     addToCart();
-  }
+}
 
 // Appel à  API
 function getArticle() {
@@ -20,7 +20,7 @@ function getArticle() {
         })
         .catch(function (error) {
             alert(error)
-        })
+    })
 }
 async function main() {
     const article = await getArticle()
@@ -50,13 +50,14 @@ async function main() {
         option.innerText = article.colors[i];
         colorSelect.appendChild(option);
       }
-      document.getElementById("myBtn").addEventListener("click", addToCart);
+
+        document.getElementById("myBtn").addEventListener("click", addToCart);
 // Confirmation du boton -- ajoutez à mon panier --
-function addToCart() {
-  document.getElementById("succes").innerHTML = "Votre a bien été ajouté";
+function addToCart()  {
+        document.getElementById("succes").innerHTML = " Votre article a bien été ajouté au panier";
   
+    }
 }
 
-}
 
 
