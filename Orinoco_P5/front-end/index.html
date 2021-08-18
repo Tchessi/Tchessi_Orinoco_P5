@@ -1,61 +1,54 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accueil-Orinoco</title>
-  <!--link stylesheet-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>Accueil-OriNours</title>
+  <!--link css-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
 </head>
+
 <body>
   <header>
-      <div class="container mx-auto px-4 py-8">
-          <nav class="navbar navbar-light bg-light">
-              <div class="container-fluid">
-                <a class="navbar-brand"><img src="images/logo.png" width="130" height="50" alt=""></a>
-                <form class="d-flex">
-                  <a href="panier.html"><div class="btn btn-outline-success">Panier</div></a>
-                </form>
-              </div>
-            </nav>
-      </div>
-  </header>
-  <div class="container">
-    <a href="produit.html" id="produitLink" >
-      <div class="row row-cols-1 row-cols-md-3 g-4" id="main"></div>
-    </a>
-    </div>
-  <div class="footer-dark">
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 col-md-3 item">
-                    <h3>Services</h3>
-                    <ul>
-                        <li><a href="#">Contacts</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-6 col-md-3 item">
-                    <h3>About</h3>
-                    <ul>
-                        <li><a href="#">Company</a></li>
-                        <li><a href="#">Team</a></li>
-                        <li><a href="#">Careers</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-6 item text">
-                    <h3>Orinoco</h3>
-                    <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+    <div class="container-fluid">
+        <div class="header-container">
+            <div class="nav">
+                <a href="index.html"><h1 class="nav__logo">ORINOURS</h1></a>
+                <a href="panier.html"><div class="nav__cart">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
                 </div>
             </div>
-            <p class="copyright">Orinoco © 2021</p>
         </div>
-    </footer>
-</div>
-<!--Script-->
-<script text="javascript" src="./js/index.js"></script>
+    </div>
+</header>
+<main>
+    <div class="teddy-bear__bg" >
+        <div class="teddy-bear__bg__text-group">
+            <h2 class="teddy-bear__bg__text-group__title">Personnalisez votre nounours</h2>
+            <p class="teddy-bear__bg__text-group__subtitle">Bienvenue dans un monde de douceur et de tendresse en compagnie des plus belles peluches ! Indémodables et incontournables dans la chambre d'enfant, elles jouent un rôle essentiel dans l'évolution des tout-petits.</p>
+        </div>                
+    </div>
+    <div class="products-container">
+        <h3 class="title">Nos nounours</h3>
+        <div class="products">
+            
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="nav">
+        <a href="" class="nav__link">Contact</a>
+        <a href="" class="nav__link">Mentions légales</a>
+    </div>
+</footer>
+  <!--Script-->
+  <script text="javascript" src="./js/index.js"></script>
 </body>
-</html>
 
+</html>
