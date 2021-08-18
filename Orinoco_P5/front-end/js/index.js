@@ -10,6 +10,7 @@ function getArticles() {
     .then(function (res) {
       return res.json();
     })
+    //  Permet de définir un bloc de code à exécuter, si une erreur se produit dans le bloc.
     .catch((error) => {
       let productsContainer = document.querySelector(".products-container");
       productsContainer.innerHTML =
@@ -29,7 +30,7 @@ function getArticles() {
 
         let productLink = document.createElement("a");
         productCard.appendChild(productLink);
-        productLink.href = `product.html?id=${resultatAPI[article]._id}`;
+        productLink.href = `produit.html?id=${resultatAPI[article]._id}`;
         productLink.classList.add("stretched-link");
 
         let productImgDiv = document.createElement("div");
