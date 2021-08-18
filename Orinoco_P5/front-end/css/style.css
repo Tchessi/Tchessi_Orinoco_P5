@@ -12,7 +12,10 @@ a {
 h1 {
   font-family: "MV Boli";
 }
-
+.fa-shopping-bag:before {
+  content: "\f290";
+  font-size: -webkit-xxx-large;
+}
 .container-fluid {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -24,6 +27,7 @@ h1 {
   background: #F3E9F1;
 }
 .header-container {
+  margin-top: 50px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -252,8 +256,8 @@ main .products-container .products .product__infos {
       -ms-flex-pack: justify;
           justify-content: space-between;
   font-size: 25px;
-  border-radius: 0 0 20px 20px;
   color: brown;
+  font-weight: 700;
 }
 
 footer {
