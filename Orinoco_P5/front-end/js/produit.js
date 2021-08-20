@@ -70,7 +70,7 @@ function getArticles() {
 }
 
 function addToCart() {
-  const addToCartBtn = document.querySelector(".add-to-cart");
+  const addToCartBtn = document.querySelector("#add-to-cart");
   const confirmation = document.querySelector(".added-to-cart-confirmation");
   const textConfirmation = document.querySelector(".confirmation-text");
   
