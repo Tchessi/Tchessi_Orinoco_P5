@@ -20,8 +20,8 @@
         <div class="container-fluid">
             <div class="header-container">
                 <div class="nav">
-                    <a href="index.html"><img src="./images/logo.png" width="200" height="80" alt=""></a>
-                    <a href="produit.html"><div class="nav__cart">
+                    <a href="index.html"><img src="./images/logo.png" width="180" height="80" alt=""></a>
+                    <a href="panier.html"><div class="nav__cart">
                         <i class="fas fa-shopping-bag"></i>
                         </div>
                     </a>
@@ -41,11 +41,11 @@
                     <div class="product-card__infos__price"></div>
                     <div class="product-card__infos__quantity">
                         <label for="bearNum">Quantité :</label>
-                        <input id="bearNum" type="number" name="bearNum" value="1" min="1">
+                        <input class="form-control" id="bearNum"  type="number" name="bearNum" value="1" min="1">
                     </div>
                     <div class="product-card__infos__color">
                         <label for="color-select">Couleur :</label>
-                        <select name="color" id="color-select">
+                        <select class="form-select" name="color" id="color-select">
                         </select>
                     </div>
                     <div class="added-to-cart-confirmation">
@@ -53,12 +53,12 @@
                     </div>
                     <div class="product-card__infos__buttons">
                         <a href="index.html">
-                            <div class="product-card__infos__button back-to-home">
+                            <div class="btn btn-warning">
                                 <i class="fas fa-angle-left"></i>SHOPPING
                             </div>
                         </a>
                         <a href="#">
-                            <div class="product-card__infos__button add-to-cart">
+                            <div class="btn btn-success" id="add-to-cart">
                                 AJOUTER AU PANIER
                             </div>
                         </a>
