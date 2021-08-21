@@ -261,7 +261,7 @@ main .products-container .products .product__infos {
 }
 
 footer {
-  background: #F3E9F1;
+  background: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -288,7 +288,7 @@ footer .nav {
 }
 
 footer .nav__link {
-  color: #dee9f7;
+  color: #9c27b0;
   font-size: 24px;
 }
 
