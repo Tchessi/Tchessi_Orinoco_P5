@@ -14,10 +14,7 @@ body {
   h1 {
     font-family: "MV Boli";
   }
-  .fa-shopping-bag:before {
-    content: "\f290";
-    font-size: -webkit-xxx-large;
-}
+  
 .fa-shopping-bag:hover {
     color: rgba(9, 158, 9, 0.774);
 }
@@ -33,7 +30,6 @@ body {
   }
   
   .header-container {
-    margin-top: 50px;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -56,13 +52,9 @@ body {
         -ms-flex-align: center;
             align-items: center;
     width: 80%;
+    padding: 17px 0;
   }
-  
-  .nav__logo {
-    color: #352208;
-    font-size: 30px;
-  }
-  
+    
   .nav__cart {
     position: relative;
     color: #352208;
