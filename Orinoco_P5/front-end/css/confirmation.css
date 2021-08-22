@@ -106,6 +106,7 @@ body {
         align-self: center;
     width: 100%;
     background: #F3E9F1;
+    height: 100vh;
   }
   
   .recap .confirm {
@@ -139,7 +140,7 @@ body {
   }
   
   footer {
-    background: #352208;
+    background: #ffffff;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -166,7 +167,7 @@ body {
   }
   
   footer .nav__link {
-    color: #dee9f7;
+    color: #9c27b0;
     font-size: 24px;
   }
   
