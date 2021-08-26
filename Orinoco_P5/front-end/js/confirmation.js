@@ -9,7 +9,6 @@ function displayOrderIdAndPrice() {
     const orderId = document.querySelector(".orderid span");
 
 
-
     totalConfirmation.innerText = localStorage.getItem("total");
     orderId.innerHTML = localStorage.getItem("orderId");
 
