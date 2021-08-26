@@ -149,7 +149,7 @@ function checkFormAndPostRequest() {
         body: JSON.stringify(order),
         headers: { "Content-Type": "application/json" },
       };
-
+ 
       // Préparation du prix formaté pour l'afficher sur la prochaine page
       let priceConfirmation = document.querySelector(".total").innerText;
       priceConfirmation = priceConfirmation.split(" :");
