@@ -144,6 +144,10 @@ p {
   text-align: center;
 }
 
+.product__infos__price {
+  background-color: bisque;
+  padding: 0px 5px;
+}
 main .products-container {
   background-color: #F3E9F1;
   display: -webkit-box;
