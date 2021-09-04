@@ -75,7 +75,7 @@ function countTotalInCart() {
 
   // Additionner les valeurs du tableau pour avoir le prix total
   const reducer = (acc, currentVal) => acc + currentVal;
-  arrayOfPrice = arrayOfPrice.reduce(reducer);
+  arrayOfPrice = arrayOfPrice.reduce(reducer, 0);
 
   // Affichage du prix avec formatage €
   totalPrice.innerText = `Total : ${(arrayOfPrice = new Intl.NumberFormat(
@@ -88,7 +88,6 @@ function countTotalInCart() {
 }
 
 function toEmptyCart() {
-
   // Lorsque qu'on clique sur le bouton, le panier se vide ainsi que le localStorage
   const buttonToEmptyCart = document.querySelector("#to-empty-cart");
   buttonToEmptyCart.addEventListener("click", () => {
@@ -97,7 +96,6 @@ function toEmptyCart() {
 }
 
 function checkFormAndPostRequest() {
-
   // On récupère les inputs depuis le DOM.
   const submit = document.querySelector("#submit");
   let inputName = document.querySelector("#name");
@@ -126,10 +124,14 @@ function checkFormAndPostRequest() {
       e.preventDefault();
       erreur.innerText = "Votre numéro de téléphone n'est pas valide";
     } else {
-
-      // Si le formulaire est valide, le tableau productsBought contiendra un tableau d'objet qui sont les produits acheté, et order contiendra ce tableau ainsi que l'objet qui contient les infos de l'acheteur
-      let productsBought = [];
-      productsBought.push(copyOfLS);
+      // Si le formulaire est valide, le tableau productsBought contiendra un tableau des  id qui sont les produits acheté, et order contiendra ce tableau ainsi que l'objet qui contient les infos de l'acheteur
+      let productsBought = [
+        "5be9c8541c9d440000665243",
+        "5beaa8bf1c9d440000a57d94",
+        "5beaaa8f1c9d440000a57d95",
+        "5beaabe91c9d440000a57d96",
+        "5beaacd41c9d440000a57d97",
+      ];
 
       const order = {
         contact: {
@@ -149,7 +151,7 @@ function checkFormAndPostRequest() {
         body: JSON.stringify(order),
         headers: { "Content-Type": "application/json" },
       };
- 
+
       // Préparation du prix formaté pour l'afficher sur la prochaine page
       let priceConfirmation = document.querySelector(".total").innerText;
       priceConfirmation = priceConfirmation.split(" :");
@@ -158,7 +160,7 @@ function checkFormAndPostRequest() {
       fetch("http://localhost:3000/api/teddies/order", options)
         .then((response) => response.json())
         .then((data) => {
-          localStorage.clear();
+          // localStorage.clear();
           localStorage.setItem("orderId", data.orderId);
           localStorage.setItem("total", priceConfirmation[1]);
 
