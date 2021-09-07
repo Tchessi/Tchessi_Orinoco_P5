@@ -10,7 +10,6 @@ const productCardPrice = document.querySelector(".product-card__infos__price");
 const bearNumber = document.querySelector("#bearNum");
 const colorSelect = document.querySelector("#color-select");
 
-
 main();
 
 function main() {
@@ -20,7 +19,9 @@ function main() {
 }
 
 function checkIf404() {
-  window.addEventListener("error", (e) => {
+  window.addEventListener(
+    "error",
+    (e) => {
       let container = document.querySelector(".container");
       container.innerHTML = `<p>Cette page n'existe pas. <a class="back-to-home" href="index.html">Retourner dans la boutique ?</a></p>`;
       container.style.padding = "40vh 0";
@@ -46,7 +47,6 @@ function getArticles() {
       container.style.padding = "45vh 0";
     })
     .then(function (resultatAPI) {
-        
       // On place les données reçues via l'API aux bons endroits sur la page
       article = resultatAPI;
       productCardName.innerHTML = article.name;
@@ -73,7 +73,7 @@ function addToCart() {
   const addToCartBtn = document.querySelector("#add-to-cart");
   const confirmation = document.querySelector(".added-to-cart-confirmation");
   const textConfirmation = document.querySelector(".confirmation-text");
-  
+
   addToCartBtn.addEventListener("click", () => {
     if (bearNumber.value > 0 && bearNumber.value < 100) {
       // ------ Création du produit qui sera ajouté au panier
@@ -86,17 +86,15 @@ function addToCart() {
 
       // ----------------- Gestion du localStorage
       let arrayProductsInCart = [];
-      
+
       // Si le localStorage existe, on récupère son contenu, on l'insère dans le tableau arrayProductsInCart, puis on le renvoit vers le localStorage avec le nouveau produit ajouté.
       if (localStorage.getItem("products") !== null) {
         arrayProductsInCart = JSON.parse(localStorage.getItem("products"));
-        
-        
+
         // Si le LS est vide, on le crée avec le produit ajouté
-      } 
-        arrayProductsInCart.push(productAdded);
-        localStorage.setItem("products", JSON.stringify(arrayProductsInCart));
-      
+      }
+      arrayProductsInCart.push(productAdded);
+      localStorage.setItem("products", JSON.stringify(arrayProductsInCart));
 
       // Effets visuels lors d'un ajout au panier
       confirmation.style.visibility = "visible";
