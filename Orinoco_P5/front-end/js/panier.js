@@ -107,6 +107,94 @@ function checkFormAndPostRequest() {
   let inputPhone = document.querySelector("#phone");
   let erreur = document.querySelector(".erreur");
 
+  //********validation du formulaire avant envoie en POST****
+
+  const form = document.querySelector("#loginForm");
+  // Ecouter la modification du name
+  form.user_name.addEventListener("change", function () {
+    validUserName(this);
+  });
+
+  // création de la Reg exp pour la validation du Nom
+  validUserName = function (inputName) {
+    let regexExpName = new RegExp("^[A-Z]{1}[A-Za-zÀ-ÿ -]+$");
+    let testName = regexExpName.test(inputName.value);
+    console.log(testName);
+  };
+  //*******/ Ecouter la modification du LastName
+  form.user_lastname.addEventListener("change", function () {
+    validUserLastName(this);
+  });
+
+  // création de la Reg exp pour la validation du LastName
+  validUserLastName = function (inputLastName) {
+    let regexExpLastName = new RegExp(
+      "^(([a-zA-ZÀ-ÿ]+[s-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+))$"
+    );
+    let testLastName = regexExpLastName.test(inputLastName.value);
+  };
+
+  //*******/ Ecouter la modification du user_postal*************
+  form.user_postal.addEventListener("change", function () {
+    validUserPostal(this);
+  });
+
+  // création de la Reg exp pour la validation du code postal
+  validUserPostal = function (inputPostal) {
+    let regexExpPostal = new RegExp("^(([0-8][0-9])|(9[0-5]))[0-9]{3}$");
+    let testPostal = regexExpPostal.test(inputPostal.value);
+  };
+
+  //*******/ Ecouter la modification du nom de la ville*************
+  form.user_city.addEventListener("change", function () {
+    validUserCity(this);
+  });
+
+  // création de la Reg exp pour la validation de la ville
+  validUserCity = function (inputCity) {
+    let regexExpCity = new RegExp(
+      "^(([a-zA-ZÀ-ÿ]+[s-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+)){1,10}$"
+    );
+    let testcity = regexExpCity.test(inputCity.value);
+  };
+
+  //*******/ Ecouter la modification de l'adresse*************
+  form.user_adress.addEventListener("change", function () {
+    validUserAdress(this);
+  });
+
+  // création de la Reg exp pour la validation d'adresse
+  validUserAdress = function (inputAdress) {
+    let regexExpAdress = new RegExp("^[0-9]{1,4}[ ,-][ A-Za-zÀ-ÿ0-9-]+$");
+    let testAdress = regexExpAdress.test(inputAdress.value);
+  };
+
+  //*******/ Ecouter la modification de l'Email*************
+  form.user_mail.addEventListener("change", function () {
+    validUserMail(this);
+  });
+
+  // création de la Reg exp pour la validation de l'Email
+  validUserMail = function (inputMail) {
+    let regexExpMail = new RegExp(
+      "^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}.[a-z]{2,4}$"
+    );
+    let testMail = regexExpMail.test(inputMail.value);
+    console.log(testMail);
+  };
+
+  //*******/ Ecouter la modification du numéro de téléphone*************
+  form.phone.addEventListener("change", function () {
+    validPhone(this);
+  });
+
+  // création de la Reg exp pour la validation du numero de téléphone
+  validPhone = function (inputPhone) {
+    let regexExpPhone = new RegExp("^([+]?33[-]?|[0])?[1-9][0-9]{8}$");
+    let testPhone = regexExpPhone.test(inputPhone.value);
+    console.log(testPhone);
+  };
+  // ***************************FIN DES REGEX EXP****************************
   // Lors d'un clic, si l'un des champs n'est pas rempli, on affiche une erreur, on empêche l'envoi du formulaire. On vérifie aussi que le numéro est un nombre, sinon même chose.
   submit.addEventListener("click", (e) => {
     if (
