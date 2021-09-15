@@ -75,7 +75,7 @@ function countTotalInCart() {
 
   // Additionner les valeurs du tableau pour avoir le prix total
   const reducer = (acc, currentVal) => acc + currentVal;
-  arrayOfPrice = arrayOfPrice.reduce(reducer, 0);
+  arrayOfPrice = arrayOfPrice.reduce(reducer);
 
   // Affichage du prix avec formatage €
   totalPrice.innerText = `Total : ${(arrayOfPrice = new Intl.NumberFormat(
@@ -213,7 +213,7 @@ function checkFormAndPostRequest() {
       erreur.innerText = "Votre numéro de téléphone n'est pas valide";
     } else {
       // Si le formulaire est valide, le tableau productsBought contiendra un tableau des  id qui sont les produits acheté, et order contiendra ce tableau ainsi que l'objet qui contient les infos de l'acheteur
-      let productsBought = [
+      let productsId = [
         "5be9c8541c9d440000665243",
         "5beaa8bf1c9d440000a57d94",
         "5beaaa8f1c9d440000a57d95",
@@ -229,7 +229,7 @@ function checkFormAndPostRequest() {
           address: inputAdress.value,
           email: inputMail.value,
         },
-        products: productsBought,
+        products: productsId,
       };
 
       // -------  Envoi de la requête POST au back-end --------
